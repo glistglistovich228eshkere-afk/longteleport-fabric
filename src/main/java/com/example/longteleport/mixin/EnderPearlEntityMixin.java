@@ -26,10 +26,10 @@ public abstract class EnderPearlEntityMixin {
         // Only pearls thrown by a server-side player
         Entity owner = self.getOwner();
         if (!(owner instanceof ServerPlayerEntity player)) return;
-        if (!(self.getWorld() instanceof ServerWorld world)) return;
+        if (!(self.getEntityWorld() instanceof ServerWorld world)) return;
 
         // Same-dimension check
-        if (player.getWorld() != world) return;
+        if (player.getEntityWorld() != world) return;
 
         // Captured before the owner is moved by the pearl's teleport
         Vec3d originPos = player.getEntityPos();

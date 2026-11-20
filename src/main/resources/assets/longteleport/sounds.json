@@ -1,0 +1,8 @@
+{
+  "long_teleport": {
+    "subtitles": "subtitles.longteleport.long_teleport",
+    "sounds": [
+      "longteleport:long_teleport"
+    ]
+  }
+}

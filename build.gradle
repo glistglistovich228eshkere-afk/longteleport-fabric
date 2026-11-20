@@ -1,5 +1,5 @@
 plugins {
-    id "fabric-loom" version "1.14"
+    id "fabric-loom" version "1.15.0-alpha.30"
     id "maven-publish"
 }
 
@@ -8,10 +8,6 @@ group = project.maven_group
 
 base {
     archivesName = project.archives_base_name
-}
-
-repositories {
-    // Fabric's own repo, needed for Loom-provided libraries
 }
 
 loom {
@@ -53,15 +49,5 @@ java {
 jar {
     from("LICENSE") {
         rename { "${it}_${project.base.archivesName.get()}" }
-    }
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
-    }
-    repositories {
     }
 }

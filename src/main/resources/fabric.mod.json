@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "longteleport",
+  "version": "1.0.0",
+  "name": "Long Teleport",
+  "description": "Dramatic effects when an Ender Pearl teleports you more than 5000 blocks.",
+  "authors": ["glist"],
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.longteleport.LongTeleport"],
+    "client": ["com.example.longteleport.LongTeleportClient"]
+  },
+  "mixins": ["longteleport.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
